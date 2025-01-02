@@ -1,15 +1,22 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 abstract class Character {
 
     private int healthPoints;
     private int strength;
     private int dexterity;
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints += healthPoints;
+    }
+
     private int constitution;
     private int intelligence;
     private int wisdom;
     private int charisma;
     public ArrayList<Item> inventory = new ArrayList<Item>();
+    Random rand = new Random();
 
     public int getHealthPoints() {
         return healthPoints;
@@ -41,9 +48,9 @@ abstract class Character {
     }
 
 
-    public abstract void attack(Character target);
+    public abstract int attack(Character target);
 
-    public abstract void defend(Character attacker);
+    public abstract int defend(Character attacker);
 
     public abstract int calculateDefence();
 

@@ -1,11 +1,11 @@
 public class Mage  extends Character{
     @Override
-    public void attack(Character target) {
+    public int attack(Character target) {
 
     }
 
     @Override
-    public void defend(Character attacker) {
+    public int defend(Character attacker) {
 
     }
 

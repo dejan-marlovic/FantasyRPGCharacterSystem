@@ -1,12 +1,12 @@
 public class Rogue extends Character {
     @Override
-    public void attack(Character target) {
-
+    public int attack(Character target) {
+        return 5;
     }
 
     @Override
-    public void defend(Character attacker) {
-
+    public int defend(Character attacker) {
+        return 5;
     }
 
     @Override
