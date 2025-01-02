@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 abstract class Character {
 
+    private int healthPoints;
     private int strength;
     private int dexterity;
     private int constitution;
@@ -9,6 +10,11 @@ abstract class Character {
     private int wisdom;
     private int charisma;
     public ArrayList<Item> inventory = new ArrayList<Item>();
+
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
 
     public int getStrength() {
         return strength;
@@ -34,35 +40,14 @@ abstract class Character {
         return charisma;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
 
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
-    }
+    public abstract void attack(Character target);
 
-    public void setConstitution(int constitution) {
-        this.constitution = constitution;
-    }
+    public abstract void defend(Character attacker);
 
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
-    }
+    public abstract int calculateDefence();
 
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
-
-    public void setCharisma(int charisma) {
-        this.charisma = charisma;
-    }
-
-    public abstract void attack();
-
-    public abstract void defend();
-
-    public void useItem(Item item){
+    public void equipItem(Item item){
         inventory.add(item);
     }
 
