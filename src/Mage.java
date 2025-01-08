@@ -1,17 +1,21 @@
-public class Mage  extends Character{
-    @Override
-    public int attack(Character target) {
+public class Mage  extends Hero{
 
+    private double intelligence;
+
+    @Override
+    public double attack() {
+        return 5;
     }
 
     @Override
-    public int defend(Character attacker) {
+    public void takeDamage(double damage) {
 
     }
 
+
     @Override
-    public int calculateDefence() {
-        int defence = 5;
+    public double calculateDefence() {
+        double defence = 5;
         return defence;
     }
 
